@@ -1,4 +1,92 @@
 /*
-* Third Party
+* Normalize css
 */
 @import "../../bower_components/normalize.css/normalize.css";
+
+// Variables
+
+$font: normal 100% Ubuntu, Verdana, Arial sans-serif;
+$content-text-color: #000;
+$bg-color-body: #fff;
+$bg-color-header: #080d35;
+
+// Base styles
+
+* {
+  box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+
+body {
+  font: $font;
+  line-height:1.5em;
+  color: $content-text-color;
+  background-color: $bg-color-body;
+}
+
+header.header {
+  background: url(../img/header-bg.jpg) no-repeat 50% 0%;
+  background-color: $bg-color-header;
+  background-size: cover;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 1em;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 0.75em;
+  font-weight: 700;
+}
+
+h6 {
+  font-size: 0.5em;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1em;
+
+  &:hover{
+    text-decoration: underline;
+  }
+}

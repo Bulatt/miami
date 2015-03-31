@@ -1,0 +1,39 @@
+// Variables
+$color-phone: #fff;
+$color-menu: #fff;
+
+
+.phone {
+  span {
+    font-weight: 500;
+    text-transform: uppercase;
+    opacity: 0.6;
+    color: $color-phone;
+  }
+ }
+
+.call-order {
+  a {
+    opacity: 0.6;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $color-phone;
+    border-bottom: 1px dashed $color-phone;
+    &:hover {
+      text-decoration: none;
+      opacity: 1;
+    }
+  }
+}
+
+.menu {
+  a {
+    color: $color-menu;
+    font-weight: 500;
+    text-transform: uppercase;
+    &:hover {
+      text-decoration: none;
+      opacity: 0.6;
+    }
+  }
+}

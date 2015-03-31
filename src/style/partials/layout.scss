@@ -1,0 +1,58 @@
+header.header {
+  margin: 0 auto;
+}
+
+.position {
+  margin: 0 auto;
+  width: 58.75%;
+}
+
+.header-top {
+  padding: 3.438em 0 20.625em 0 ;
+
+  .phone {
+    width: 32%;
+    text-align: left;
+    padding-top: 2.5em;
+  }
+
+  .logo {
+    width: 36%;
+    text-align: center;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  .call-order {
+    width: 32%;
+    text-align: right;
+    padding-top: 2.5em;
+  }
+}
+
+.header-bottom {
+  padding: 14.375em 0 2.125em 0;
+}
+.menu {
+  text-align: justify;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+
+  &:after {
+    content: "";
+    margin-left: 100%;
+    display: inline-block;
+  }
+
+   li {
+    display: inline;
+
+    a {
+      display: inline-block;
+    }
+  }
+}
