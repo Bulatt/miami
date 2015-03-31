@@ -3,12 +3,6 @@
 */
 @import "../../bower_components/normalize.css/normalize.css";
 
-// Variables
-
-$font: normal 100% Ubuntu, Verdana, Arial sans-serif;
-$content-text-color: #000;
-$bg-color-body: #fff;
-$bg-color-header: #080d35;
 
 // Base styles
 
@@ -38,18 +32,6 @@ $bg-color-header: #080d35;
   clear: both;
 }
 
-body {
-  font: $font;
-  line-height:1.5em;
-  color: $content-text-color;
-  background-color: $bg-color-body;
-}
-
-header.header {
-  background: url(../img/header-bg.jpg) no-repeat 50% 0%;
-  background-color: $bg-color-header;
-  background-size: cover;
-}
 
 h1 {
   font-size: 3em;

@@ -1,7 +1,26 @@
 // Variables
+
+$font: normal 100% Ubuntu, Verdana, Arial sans-serif;
+$content-text-color: #000;
+$bg-color-body: #fff;
+$bg-color-header: #080d35;
+$bg-color-gallery: #eee;
 $color-phone: #fff;
 $color-menu: #fff;
+$color-title: #00aaef;
 
+body {
+  font: $font;
+  line-height:1.5em;
+  color: $content-text-color;
+  background-color: $bg-color-body;
+}
+
+header.header {
+  background: url(../img/header-bg.jpg) no-repeat 50% 0%;
+  background-color: $bg-color-header;
+  background-size: cover;
+}
 
 .phone {
   span {
@@ -36,4 +55,35 @@ $color-menu: #fff;
       opacity: 0.6;
     }
   }
+}
+
+.title {
+  h1 {
+    line-height: 1.25em;
+    margin: 0;
+    strong {
+      font-weight: 500;
+    }
+    span {
+      color: $color-title;
+    }
+  }
+}
+.article {
+  h4 {
+    padding-left: 4.875em;
+  }
+  p {
+    padding-left: 4.875em;
+  }
+  .list {
+    padding-left: 4em;
+  }
+  strong {
+    font-weight: 500;
+  }
+}
+
+.gallery {
+  background: $bg-color-gallery;
 }

@@ -4,7 +4,8 @@ header.header {
 
 .position {
   margin: 0 auto;
-  width: 58.75%;
+  max-width: 58.75em;
+  padding: 0 0.5em;
 }
 
 .header-top {
@@ -56,3 +57,42 @@ header.header {
     }
   }
 }
+
+.about {
+  margin: 8.125em 0 10.375em 0;
+}
+
+.title {
+  width: 32%;
+}
+.article {
+  margin-left: 32%;
+  padding: 0 2%;
+}
+
+.gallery {
+  position: relative;
+  h1 {
+    left: 0;
+    right: 0;
+    position: absolute;
+    top: -2%;
+    margin: 0;
+    text-align: center;
+  }
+}
+.pad {
+  padding-top: 6.875em;
+}
+
+.row-gallery{
+  width: 100%;
+  img {
+    display: inline-block;
+    &:first-child {
+      margin-right: 0.3em;
+    }
+  }
+}
+
+
