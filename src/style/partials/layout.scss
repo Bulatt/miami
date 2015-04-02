@@ -85,14 +85,60 @@ header.header {
   padding-top: 6.875em;
 }
 
-.row-gallery{
+.row-gallery {
   width: 100%;
+  display: table;
+  .box-row {
+    margin-bottom: 2.1em;
+    height: 100%;
+  }
+  .box-wrap {
+    display: table-row;
+    width: 100%;
+  }
+
+  .box {
+    display: table-cell;
+    white-space: nowrap;
+    overflow: hidden;
+    table-layout:fixed;
+    padding-bottom: 1.188em;
+    padding-right: 0.313em;
+  }
   img {
     display: inline-block;
-    &:first-child {
-      margin-right: 0.3em;
-    }
+    vertical-align: middle;
+    width: 100%;
+    height:auto;
+  }
+}
+.center {
+  text-align: center;
+}
+
+.consultation {
+  padding: 0 0 9.125em;
+  h1 {
+    position: absolute;
+    top:0;
+    left: 0;
   }
 }
 
+.wrap-form {
+  margin-top: 136px;
+
+  .description {
+    float: left;
+    width: 50%;
+    margin: 1em 0 0;
+    h2 {
+      margin: 0;
+    }
+  }
+  .form-consul {
+    margin:1em 0 0 52%;
+    text-align: right;
+  }
+}
 

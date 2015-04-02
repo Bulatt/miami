@@ -51,8 +51,50 @@ html(lang="en")
       .position
         h1 Gallery
         .row-gallery.pad
-          img(src="img/photo1.jpg", alt="photo1", class="photo1")
-          img(src="img/photo2.jpg", alt="photo2", class="photo2")
-        .title Marina Palms /
-          span North Miami Beach, FL 33162
+          .box-row
+            .box-wrap
+              .box
+                img(src="img/photo1.jpg", alt="photo1", class="photo1")
+              .box
+                img(src="img/photo2.jpg", alt="photo2", class="photo2")
+            .title Marina Palms
+              i &#32 &#47 &#32
+              span North Miami Beach, FL 33162
+          .box-row
+            .box-wrap
+              .box
+                img(src="img/photo3.jpg", alt="photo3", class="photo3")
+              .box
+                img(src="img/photo4.jpg", alt="photo4", class="photo4")
+            .title Edition Residens
+              i &#32 &#47 &#32
+              span Miami Beach, FL 33139
+          .box-row
+            .box-wrap
+              .box
+                img(src="img/photo5.jpg", alt="photo5", class="photo5")
+              .box
+                img(src="img/photo6.jpg", alt="photo6", class="photo6")
+            .title Faena House
+              i &#32 &#47 &#32
+              span Miami Beach, FL 33140
+        .view-all.center
+          a.btn-view(href="#") View all
+    .consultation
+      .position
+        h1 Consultation
+        .wrap-form.clearfix
+          .description
+            h2
+              |How long have
+              br
+              |you do yourself a gift?
+            p The procedural change mezzo forte starts izoritmichesky pickup at these moments stop LA Mazel and
+              | VA Tsukkerman in his "Analysis of musical works." Pointillism, which originated in the music of
+              |the early twentieth century, microforms, found a distant historical
+          form.form-consul(action="#", method="post")
+            input(type="text" placeholder="name", name="name" required)
+            input(type="tel" placeholder="phone", name="phone" required)
+            input(type="email" placeholder="email", required)
+            button(type="submit") Consultation
 

@@ -4,10 +4,26 @@ $font: normal 100% Ubuntu, Verdana, Arial sans-serif;
 $content-text-color: #000;
 $bg-color-body: #fff;
 $bg-color-header: #080d35;
-$bg-color-gallery: #eee;
+$bg-color-grey: #eee;
+$bg-input: #eee;
 $color-phone: #fff;
 $color-menu: #fff;
 $color-title: #00aaef;
+$color-btn: #06a0de;
+
+// Mixin
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}
+}
+
+input:focus::-webkit-input-placeholder {color: transparent}
+input:focus::-moz-placeholder          {color: transparent}
+input:focus:-moz-placeholder           {color: transparent}
+input:focus:-ms-input-placeholder      {color: transparent}
 
 body {
   font: $font;
@@ -85,5 +101,75 @@ header.header {
 }
 
 .gallery {
-  background: $bg-color-gallery;
+  background: $bg-color-grey;
+  padding-bottom: 110px;
+  .title {
+    font-weight: 500;
+    width: 100%;
+    i {
+      font-weight: 400;
+      font: $font;
+    }
+    span {
+      font-weight: 400;
+      color: #00aaef;
+    }
+  }
+
+.view-all {
+  margin-top: 2.438em;
 }
+  .btn-view {
+    display: inline-block;
+    padding: 1em 4.5em;
+    background-color: #00aaef;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0 auto;
+    &:hover,
+    &:focus {
+      background-color: $color-btn;
+    }
+  }
+}
+
+.form-consul {
+  input {
+    width: 85%;
+    height: 52px;
+    background-color: $bg-input;
+    border: 0;
+    outline: 0;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0 3em;
+
+    &:focus {
+      border: 2px solid #7c7c7c;
+    }
+  }
+    @include placeholder {
+        color: $content-text-color;
+    }
+    button {
+      width: 85%;
+      height: 52px;
+      background-color: #00aaef;
+      border: 0;
+      font-size: 14px;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: #fff;
+      &:hover,
+      &:focus {
+        background-color: $color-btn;
+        text-decoration: underline;
+      }
+    }
+}
+
