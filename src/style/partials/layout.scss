@@ -118,12 +118,15 @@ header.header {
       margin: 0;
     }
   }
-  .form-consul {
+  .form {
     margin:1em 0 0 52%;
     text-align: right;
   }
 }
 
+.testimonials {
+  padding: 0 0 120px;
+}
 .reviews {
   h4 {
     margin: 0.5em 0 0;
@@ -142,5 +145,24 @@ header.header {
   width: 32%;
   text-align: center;
   padding: 1%;
+}
+
+.contact {
+  padding-bottom: 105px;
+}
+
+.footer {
+  height: 540px;
+  text-align: center;
+  .logo {
+    padding: 230px 0 150px;
+  }
+  a {
+    display: inline-block;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
 }
 
