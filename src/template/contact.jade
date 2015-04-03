@@ -1,0 +1,22 @@
+.contact
+  .position
+    .center
+      h1#contact.title-h1 Contact
+    .wrap-form.clearfix
+      .description
+        p.address Hello@miami.com
+        p.address
+          | 8 800 678 78 78
+          br
+          | 8 800 700 98 98
+        p.address
+          | 400 first ave. n.
+          br
+          | suite 700
+          br
+          | Minneapolis, MN 55401
+      form.form(action="#", method="post")
+        input(type="text" placeholder="name", name="name" required)
+        input(type="email" placeholder="email", required)
+        textarea(name="", cols="30", rows="10")
+        button(type="submit") Write to us

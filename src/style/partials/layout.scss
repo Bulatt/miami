@@ -1,6 +1,4 @@
-header.header {
-  margin: 0 auto;
-}
+// *****************   LAYOUT    ***************** //
 
 .position {
   margin: 0 auto;
@@ -8,25 +6,28 @@ header.header {
   padding: 0 0.5em;
 }
 
+
+// *************   HEADER   ************* //
+
+header.header {
+  margin: 0 auto;
+}
+
 .header-top {
   padding: 3.438em 0 20.625em 0 ;
-
   .phone {
     width: 32%;
     text-align: left;
     padding-top: 2.5em;
   }
-
   .logo {
     width: 36%;
     text-align: center;
-
     img {
       max-width: 100%;
       height: auto;
     }
   }
-
   .call-order {
     width: 32%;
     text-align: right;
@@ -37,26 +38,27 @@ header.header {
 .header-bottom {
   padding: 14.375em 0 2.125em 0;
 }
+
 .menu {
   text-align: justify;
   overflow: hidden;
   padding: 0;
   margin: 0;
-
   &:after {
     content: "";
     margin-left: 100%;
     display: inline-block;
   }
-
    li {
     display: inline;
-
     a {
       display: inline-block;
     }
   }
 }
+
+
+// *************   ABOUT   ************* //
 
 .about {
   margin: 8.125em 0 10.375em 0;
@@ -65,10 +67,15 @@ header.header {
 .title {
   width: 32%;
 }
+
 .article {
   margin-left: 32%;
   padding: 0 2%;
 }
+
+
+// *************   GALLERY   ************* //
+
 .gallery {
   padding-bottom: 160px;
 }
@@ -84,7 +91,6 @@ header.header {
     display: table-row;
     width: 100%;
   }
-
   .box {
     display: table-cell;
     white-space: nowrap;
@@ -100,16 +106,16 @@ header.header {
     height:auto;
   }
 }
-.center {
-  text-align: center;
-}
+
+
+// *************   CONSULTATION && CONTACT  ************* //
+//The same form for consultation and contact
 
 .consultation {
   padding: 0 0 9.125em;
 }
 
 .wrap-form {
-
   .description {
     float: left;
     width: 50%;
@@ -124,14 +130,22 @@ header.header {
   }
 }
 
+.contact {
+  padding-bottom: 105px;
+}
+
+// *************   TESTIMONIALS   ************* //
+
 .testimonials {
   padding: 0 0 120px;
 }
+
 .reviews {
   h4 {
     margin: 0.5em 0 0;
   }
 }
+
 .review-box {
   float: left;
   width: 30%;
@@ -147,9 +161,9 @@ header.header {
   padding: 1%;
 }
 
-.contact {
-  padding-bottom: 105px;
-}
+
+
+// *************   FOOTER   ************* //
 
 .footer {
   height: 540px;

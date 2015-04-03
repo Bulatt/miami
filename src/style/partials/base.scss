@@ -3,16 +3,15 @@
 */
 @import "../../bower_components/normalize.css/normalize.css";
 
-
-// Base styles
+/*
+Magnific-popap
+*/
+@import "../../bower_components/magnific-popup/dist/magnific-popup.css";
+// *****************   Base styles    ***************** //
 
 * {
   box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
 }
-
 
 .left {
   float: left;
@@ -22,16 +21,25 @@
   float: right;
 }
 
-.clearfix:before,
-.clearfix:after {
+.center {
+  text-align: center;
+}
+
+%clear {
   display: table;
   content: "";
   line-height: 0;
 }
-.clearfix:after {
-  clear: both;
-}
 
+.clearfix {
+  &:before {
+    @extend %clear;
+  }
+  &:after {
+    @extend %clear;
+    clear: both;
+  }
+}
 
 h1 {
   font-size: 3em;
@@ -69,7 +77,6 @@ h6 {
 a {
   text-decoration: none;
   font-size: 1em;
-
   &:hover{
     text-decoration: underline;
   }

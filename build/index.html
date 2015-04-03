@@ -12,16 +12,16 @@
         <div class="header-top clearfix">
           <div class="phone left"><span>8 800 500 50 50</span></div>
           <div class="logo left"><a href="#"><img src="img/logo.png" alt="Miami Condo Rings"/></a></div>
-          <div class="call-order left"><a href="#">Call to order</a></div>
+          <div class="call-order left"><a href="#form-send" class="call">Call to order</a></div>
         </div>
         <div class="header-bottom">
-          <ul class="menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Consulation</a></li>
-            <li><a href="#">Testimonials</a></li>
-            <li><a href="#">Contacts</a></li>
+          <ul class="menu fixed">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#consultation">Consulation</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contacts</a></li>
           </ul>
         </div>
       </div>
@@ -29,7 +29,7 @@
     <div class="about">
       <div class="position clearfix">
         <div class="title left">
-          <h1>Miami<strong> best</strong> Realry<span> — this</span></h1>
+          <h1 id="about">Miami<strong> best</strong> Realry<span> — this</span></h1>
         </div>
         <div class="article">
           <h4>Over 50 years experience in love.</h4>
@@ -52,38 +52,38 @@
     <div class="gallery">
       <div class="position">
         <div class="center">
-          <h1 class="title-h1">Gallery</h1>
+          <h1 id="gallery" class="title-h1">Gallery</h1>
         </div>
         <div class="row-gallery">
           <div class="box-row">
             <div class="box-wrap">
-              <div class="box"><img src="img/photo1.jpg" alt="photo1" class="photo1"/></div>
-              <div class="box"><img src="img/photo2.jpg" alt="photo2" class="photo2"/></div>
+              <div class="box"><a href="img/photo1.jpg"><img src="img/photo1.jpg" alt="photo1"/></a></div>
+              <div class="box"><a href="img/photo2.jpg"><img src="img/photo2.jpg" alt="photo2"/></a></div>
             </div>
             <div class="title">Marina Palms<i>&#32 &#47 &#32</i><span>North Miami Beach, FL 33162</span></div>
           </div>
           <div class="box-row">
             <div class="box-wrap">
-              <div class="box"><img src="img/photo3.jpg" alt="photo3" class="photo3"/></div>
-              <div class="box"><img src="img/photo4.jpg" alt="photo4" class="photo4"/></div>
+              <div class="box"><a href="img/photo3.jpg"><img src="img/photo3.jpg" alt="photo3"/></a></div>
+              <div class="box"><a href="img/photo4.jpg"><img src="img/photo4.jpg" alt="photo4"/></a></div>
             </div>
             <div class="title">Edition Residens<i>&#32 &#47 &#32</i><span>Miami Beach, FL 33139</span></div>
           </div>
           <div class="box-row">
             <div class="box-wrap">
-              <div class="box"><img src="img/photo5.jpg" alt="photo5" class="photo5"/></div>
-              <div class="box"><img src="img/photo6.jpg" alt="photo6" class="photo6"/></div>
+              <div class="box"><a href="img/photo5.jpg"><img src="img/photo5.jpg" alt="photo5"/></a></div>
+              <div class="box"><a href="img/photo6.jpg"><img src="img/photo6.jpg" alt="photo6"/></a></div>
             </div>
             <div class="title">Faena House<i>&#32 &#47 &#32</i><span>Miami Beach, FL 33140</span></div>
           </div>
         </div>
-        <div class="view-all center"><a href="#" class="btn-view">View all</a></div>
+        <div class="view-all center"><a href="#" class="btn-view">View</a></div>
       </div>
     </div>
     <div class="consultation">
       <div class="position">
         <div class="center">
-          <h1 class="title-h1">Consultation</h1>
+          <h1 id="consultation" class="title-h1">Consultation</h1>
         </div>
         <div class="wrap-form clearfix">
           <div class="description">
@@ -106,7 +106,7 @@
     <div class="testimonials">
       <div class="position">
         <div class="center">
-          <h1 class="title-h1">Testimonials</h1>
+          <h1 id="testimonials" class="title-h1">Testimonials</h1>
         </div>
         <div class="reviews clearfix">
           <div class="review-box"><img src="img/photo-review1.png" alt="Stev Joni"/>
@@ -129,7 +129,7 @@
     <div class="contact">
       <div class="position">
         <div class="center">
-          <h1 class="title-h1">Contact</h1>
+          <h1 id="contact" class="title-h1">Contact</h1>
         </div>
         <div class="wrap-form clearfix">
           <div class="description">
@@ -152,5 +152,14 @@
         <p>&copy; 2013 Miami.</p>
       </div>
     </footer>
+    <div class="hidden">
+      <form id="form-send" action="#" method="post" class="white-popup-block mfp-hide">
+        <input type="text" placeholder="name" name="name" required="required"/>
+        <input type="tel" placeholder="phone" name="phone" required="required"/>
+        <input type="email" placeholder="email" required="required"/>
+        <button type="submit" class="btn">send request</button>
+      </form>
+    </div>
+    <script src="js/main.js"></script>
   </body>
 </html>

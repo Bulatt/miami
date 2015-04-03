@@ -1,153 +1,20 @@
 <!DOCTYPE html>
 html(lang="en")
-  include template/header.jade
+  include template/head.jade
   body
-    header.header
-      .position
-        .header-top.clearfix
-          .phone.left
-            span 8 800 500 50 50
-          .logo.left
-            a(href="#")
-              img(src="img/logo.png", alt="Miami Condo Rings")
-          .call-order.left
-            a(href="#") Call to order
-        .header-bottom
-          ul.menu
-            li
-              a(href="#") Home
-            li
-              a(href="#") About Us
-            li
-              a(href="#") Gallery
-            li
-              a(href="#") Consulation
-            li
-              a(href="#") Testimonials
-            li
-              a(href="#") Contacts
-    .about
-      .position.clearfix
-        .title.left
-          h1
-            | Miami
-            strong  best
-            |  Realry
-            span  — this
-        .article
-          h4 Over 50 years experience in love.
-          p
-            | Mazel and VA Tsukkerman in his "Analysis of musical works."
-            | Pointillism, which originated in the music of the early twentieth century, microforms,
-            | found a distant historical.
-          p.list 1.  The market leader in real estate since 2003<br>
-            |2.  Awards Real Estate Company, 2010, 2011, 2013<br>
-            |3.  More than 200 satisfied customers premium segment<br>
-            |4.  We focus only on new buildings and high-level doskanalno know this area better than other specialists.<br>
-            |5.  Working directly with developers - so have more useful information about the profitable deals
-          p
-            strong We will never late! <br>Guaranteed secure transaction - 100%
-    .gallery
-      .position
-        .center
-          h1.title-h1 Gallery
-        .row-gallery
-          .box-row
-            .box-wrap
-              .box
-                img(src="img/photo1.jpg", alt="photo1", class="photo1")
-              .box
-                img(src="img/photo2.jpg", alt="photo2", class="photo2")
-            .title Marina Palms
-              i &#32 &#47 &#32
-              span North Miami Beach, FL 33162
-          .box-row
-            .box-wrap
-              .box
-                img(src="img/photo3.jpg", alt="photo3", class="photo3")
-              .box
-                img(src="img/photo4.jpg", alt="photo4", class="photo4")
-            .title Edition Residens
-              i &#32 &#47 &#32
-              span Miami Beach, FL 33139
-          .box-row
-            .box-wrap
-              .box
-                img(src="img/photo5.jpg", alt="photo5", class="photo5")
-              .box
-                img(src="img/photo6.jpg", alt="photo6", class="photo6")
-            .title Faena House
-              i &#32 &#47 &#32
-              span Miami Beach, FL 33140
-        .view-all.center
-          a.btn-view(href="#") View all
-    .consultation
-      .position
-        .center
-          h1.title-h1 Consultation
-        .wrap-form.clearfix
-          .description
-            h2
-              |How long have
-              br
-              |you do yourself a gift?
-            p The procedural change mezzo forte starts izoritmichesky pickup at these moments stop LA Mazel and
-              | VA Tsukkerman in his "Analysis of musical works." Pointillism, which originated in the music of
-              |the early twentieth century, microforms, found a distant historical
-          form.form(action="#", method="post")
-            input(type="text" placeholder="name", name="name" required)
-            input(type="tel" placeholder="phone", name="phone" required)
-            input(type="email" placeholder="email", required)
-            button(type="submit") Consultation
-    .testimonials
-      .position
-        .center
-          h1.title-h1 Testimonials
-        .reviews.clearfix
-          .review-box
-            img(src="img/photo-review1.png", alt="Stev Joni")
-            h4 Stev Joni
-            span Founder Lucoil
-            p Nice work, Certificates National Association of Realtors (USA).
-          .review-box-center
-            img(src="img/photo-review2.png", alt="Alisher Usmanov")
-            h4 Alisher Usmanov
-            span Ural Steel
-            p My soul is illuminated by an unearthly joy, as these beautiful spring morning, which I enjoy with all my heart.
-              br
-              | I'm all alone and blissfully happy in the local edge.
-              | as if created for the likes of me.
-          .review-box
-            img(src="img/photo-review3.png", alt="Алексей Мордашов")
-            h4 Алексей Мордашов
-            span ГазПром
-            p When my lovely valley of steam rises and half-day sun is above an impermeable. thicket
-    .contact
-      .position
-        .center
-          h1.title-h1 Contact
-        .wrap-form.clearfix
-          .description
-            p.address Hello@miami.com
-            p.address
-              | 8 800 678 78 78
-              br
-              | 8 800 700 98 98
-            p.address
-              | 400 first ave. n.
-              br
-              | suite 700
-              br
-              | Minneapolis, MN 55401
-          form.form(action="#", method="post")
-            input(type="text" placeholder="name", name="name" required)
-            input(type="email" placeholder="email", required)
-            textarea(name="", cols="30", rows="10")
-            button(type="submit") Write to us
-    footer.footer
-      .logo
-        a(href="#")
-          img(src="img/logo-footer.png", alt="Miami Condo Rings")
-      .copyright
-        p &copy; 2013 Miami.
+    include template/header.jade
+    include template/about.jade
+    include template/gallery.jade
+    include template/consultation.jade
+    include template/testimonials.jade
+    include template/contact.jade
+    include template/footer.jade
+    .hidden
+        form#form-send.white-popup-block.mfp-hide(action="#", method="post")
+          input(type="text" placeholder="name", name="name" required)
+          input(type="tel" placeholder="phone", name="phone" required)
+          input(type="email" placeholder="email", required)
+          button.btn(type="submit") send request
+    script(src='js/main.js')
+
 

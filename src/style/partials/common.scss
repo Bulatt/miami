@@ -9,7 +9,10 @@ $bg-input: #eee;
 $color-phone: #fff;
 $color-menu: #fff;
 $color-title: #00aaef;
-$color-btn: #06a0de;
+$color-btn: #00aaef;
+$color-btn-hover: #06a0de;
+$color-btn-text: #fff;
+$color-subtitle-img: #696973;
 
 // Mixin
 
@@ -32,8 +35,12 @@ body {
   background-color: $bg-color-body;
 }
 
+// *************   HEADER   ************* //
+
 header.header {
-  background: url(../img/header-bg.jpg) no-repeat 50% 0%;
+  background-image: url(../img/header-bg.jpg);
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
   background-color: $bg-color-header;
   background-size: cover;
 }
@@ -54,6 +61,7 @@ header.header {
     text-transform: uppercase;
     color: $color-phone;
     border-bottom: 1px dashed $color-phone;
+    transition: all 0.5s ease-in;
     &:hover {
       text-decoration: none;
       opacity: 1;
@@ -66,6 +74,7 @@ header.header {
     color: $color-menu;
     font-weight: 500;
     text-transform: uppercase;
+    transition: all 0.5s ease-in-out;
     &:hover {
       text-decoration: none;
       opacity: 0.6;
@@ -85,6 +94,10 @@ header.header {
     }
   }
 }
+
+
+// *************   ABOUT   ************* //
+
 .article {
   h4 {
     padding-left: 4.875em;
@@ -108,25 +121,25 @@ header.header {
   background-repeat:no-repeat;
   background-position: 50% 45px;
   padding-bottom: 40px;
-  &:before {
-    content: '';
-    position: absolute;
-    width: 38%;
-    height: 2px;
-    background-color: #00aaef;
-    top: 73%;
-    left: 4%;
-    }
+  &:before,
   &:after {
     content: '';
     position: absolute;
     width: 38%;
     height: 2px;
-    background-color: #00aaef;
+    background-color: $color-title;
     top: 73%;
+    }
+  &:before {
+    left: 4%;
+  }
+  &:after {
     right: 4%;
   }
 }
+
+
+// *************   GALLERY   ************* //
 
 .gallery {
   background: $bg-color-grey;
@@ -139,7 +152,7 @@ header.header {
     }
     span {
       font-weight: 400;
-      color: #00aaef;
+      color: $color-title;
     }
   }
 
@@ -149,19 +162,30 @@ header.header {
   .btn-view {
     display: inline-block;
     padding: 1em 4.5em;
-    background-color: #00aaef;
+    background-color: $color-btn;
     color: #fff;
-    font-size: 14px;
+    font-size: 0.875em;
     font-weight: 500;
     text-transform: uppercase;
     margin: 0 auto;
+    transition: all 0.5s ease-in;
     &:hover,
     &:focus {
-      background-color: $color-btn;
+      background-color: $color-btn-hover;
+      text-decoration: none;
     }
   }
 }
 
+
+// *************   CONSULTATION && CONTACT  ************* //
+//The same form for consultation and contact
+
+// extend
+.focus-form {
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  background-color: #f9f9f9;
+}
 .form {
   input {
     width: 85%;
@@ -169,14 +193,15 @@ header.header {
     background-color: $bg-input;
     border: 0;
     outline: 0;
-    margin-bottom: 10px;
-    font-size: 14px;
+    margin-bottom: 0.714em;
+    font-size: 0.875em;
     font-weight: 500;
     text-align: center;
     padding: 0 2em;
+    transition: all 0.5s ease-in;
 
     &:focus {
-      border: 2px solid #7c7c7c;
+      @extend .focus-form
     }
   }
     @include placeholder {
@@ -187,29 +212,38 @@ header.header {
     textarea {
       resize: none;
       border: 0;
+      outline: 0;
       width: 85%;
       background-color: $bg-input;
       padding: 0.5em 2em;
-      font-size: 14px;
+      font-size: 0.875em;
       font-weight: 500;
-      margin-bottom: 5px;
+      margin-bottom: 0.357em;
+      transition: all 0.5s ease;
+      &:focus {
+        @extend .focus-form
+      }
     }
     button {
       width: 85%;
       height: 52px;
-      background-color: #00aaef;
+      background-color: $color-btn;
       border: 0;
-      font-size: 14px;
+      font-size: 0.875em;
       font-weight: 500;
       text-transform: uppercase;
-      color: #fff;
+      color: $color-btn-text;
+      transition: all 0.5s ease;
       &:hover,
       &:focus {
-        background-color: $color-btn;
-        text-decoration: underline;
+        background-color: $color-btn-hover;
+        text-decoration: none;
       }
     }
 }
+
+
+// *************   TESTIMONIALS   ************* //
 
 .testimonials {
   background-color: $bg-color-grey;
@@ -218,7 +252,7 @@ header.header {
 .reviews {
   span {
     font-style: italic;
-    color: #696973;
+    color: $color-subtitle-img;
   }
 }
 
@@ -227,6 +261,9 @@ header.header {
   line-height: 1.25em;
 }
 
+
+// *************   FOOTER   ************* //
+
 .footer {
   background: url(../img/footer-bg.jpg) 50% 0 no-repeat #080d35;
   background-size: cover;
@@ -234,4 +271,50 @@ header.header {
     font-weight: 500;
     color: white;
   }
+}
+
+// *************   Popap form   ************* //
+
+.hidden {
+  display: none;
+}
+
+
+// *************   Popap photo   ************* //
+
+/* overlay at start */
+.mfp-fade.mfp-bg {
+  opacity: 0;
+
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8;
+}
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+  transform:scale(0);
+
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+  transform:scale(1);
+}
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+   transform:scale(0);
 }
