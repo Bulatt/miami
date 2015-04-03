@@ -69,20 +69,8 @@ header.header {
   margin-left: 32%;
   padding: 0 2%;
 }
-
 .gallery {
-  position: relative;
-  h1 {
-    left: 0;
-    right: 0;
-    position: absolute;
-    top: -2%;
-    margin: 0;
-    text-align: center;
-  }
-}
-.pad {
-  padding-top: 6.875em;
+  padding-bottom: 160px;
 }
 
 .row-gallery {
@@ -118,15 +106,9 @@ header.header {
 
 .consultation {
   padding: 0 0 9.125em;
-  h1 {
-    position: absolute;
-    top:0;
-    left: 0;
-  }
 }
 
 .wrap-form {
-  margin-top: 136px;
 
   .description {
     float: left;
@@ -140,5 +122,25 @@ header.header {
     margin:1em 0 0 52%;
     text-align: right;
   }
+}
+
+.reviews {
+  h4 {
+    margin: 0.5em 0 0;
+  }
+}
+.review-box {
+  float: left;
+  width: 30%;
+  margin: 0 2%;
+  text-align: center;
+  padding: 1%;
+}
+
+.review-box-center {
+  float: left;
+  width: 32%;
+  text-align: center;
+  padding: 1%;
 }
 

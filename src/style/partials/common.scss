@@ -100,9 +100,36 @@ header.header {
   }
 }
 
+.title-h1 {
+  display:inline-block;
+  position:relative;
+  top:-46px;
+  background-image: url("../img/h.png");
+  background-repeat:no-repeat;
+  background-position: 50% 45px;
+  padding-bottom: 40px;
+  &:before {
+    content: '';
+    position: absolute;
+    width: 38%;
+    height: 2px;
+    background-color: #00aaef;
+    top: 73%;
+    left: 4%;
+    }
+  &:after {
+    content: '';
+    position: absolute;
+    width: 38%;
+    height: 2px;
+    background-color: #00aaef;
+    top: 73%;
+    right: 4%;
+  }
+}
+
 .gallery {
   background: $bg-color-grey;
-  padding-bottom: 110px;
   .title {
     font-weight: 500;
     width: 100%;
@@ -173,3 +200,13 @@ header.header {
     }
 }
 
+.testimonials {
+  background-color: $bg-color-grey;
+}
+
+.reviews {
+  span {
+    font-style: italic;
+    color: #696973;
+  }
+}
