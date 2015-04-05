@@ -23,10 +23,6 @@ header.header {
   .logo {
     width: 36%;
     text-align: center;
-    img {
-      max-width: 100%;
-      height: auto;
-    }
   }
   .call-order {
     width: 32%;
@@ -180,3 +176,204 @@ header.header {
   }
 }
 
+
+// *************   LAYOUT AND STYLES FOR MEDIA QUERIES    ************* //
+
+//  Mobile Phones Portrait or Landscape 640px //
+@media screen and (max-width: 640px) {
+
+  .header-top {
+    padding: 1em 0;
+    .phone {
+      width: 100%;
+      text-align: center;
+      float: none;
+      position: absolute;
+      top: 90px;
+      left: 0;
+      right: 0;
+    }
+    .logo {
+      width: 100%;
+      text-align: center;
+      float: none;
+    }
+    .call-order {
+      width: 100%;
+      text-align: center;
+      padding-top: 0.7em;
+      float: none;
+    }
+  }
+
+  .header-bottom {
+    padding: 1em;
+  }
+
+  .menu {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    &:after {
+      content: "";
+      display: block;
+      margin: 0;
+    }
+     li {
+      display: block;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.4);
+      a {
+        display: block;
+        opacity: 0.6;
+        padding: 1em;
+        transition: all 0.5s ease-in;
+        &:hover {
+          background: rgba(0, 0, 0, 0.7);
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+//  Mobile Phones Portrait or Landscape 480px //
+@media screen and (max-width: 480px) {
+
+.title-h1 {
+  top:-40px;
+  font-size: 2.5em;
+}
+  // *** Header *** //
+
+  .header-top {
+    padding: 1em  0;
+    .phone {
+      width: 100%;
+      text-align: center;
+      float: none;
+      position: absolute;
+      top: 90px;
+      left: 0;
+      right: 0;
+    }
+    .logo {
+      width: 100%;
+      text-align: center;
+      float: none;
+    }
+    .call-order {
+      width: 100%;
+      text-align: center;
+      padding-top: 0.7em;
+      float: none;
+    }
+  }
+
+  .header-bottom {
+    padding: 1em;
+  }
+
+  .menu {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    &:after {
+      content: "";
+      display: block;
+      margin: 0;
+    }
+     li {
+      display: block;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.4);
+      a {
+        display: block;
+        opacity: 0.6;
+        padding: 1em;
+        transition: all 0.5s ease-in;
+        &:hover {
+          background: rgba(0, 0, 0, 0.7);
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+
+  // *** About *** //
+  .about {
+    margin: 4.125em 0 7.375em 0;
+  }
+  .title {
+    float: none;
+    width: 100%;
+    text-align: center;
+    font-size: 0.875em;
+    h1 {
+      font-size: 2.5em;
+    }
+  }
+
+  .article {
+    float: none;
+    padding: 0 2%;
+    width: 100%;
+    margin: 0;
+    text-align: left;
+    h4 {
+      padding-left: 1.875em;
+      margin: 1em 0;
+    }
+    p {
+      padding-left: 1.875em;
+    }
+    .list {
+      padding-left: 1em;
+    }
+    strong {
+      font-weight: 500;
+    }
+  }
+
+
+    // *** Consultation && Contact *** //
+
+    .wrap-form {
+      .description {
+        float: none;
+        width: 100%;
+        margin: 1em 0 0;
+        h2 {
+          margin: 0;
+        }
+      }
+      .form {
+        text-align: center;
+        width: 100%;
+        margin: 3em 0 0;
+      }
+    }
+
+    .address {
+      font-size: 1em;
+      text-align: center;
+    }
+
+  // *** Testimonials *** //
+    .review-box {
+      float: none;
+      width: 100%;
+      margin: 0;
+      text-align: center;
+      padding: 1%;
+    }
+
+    .review-box-center {
+      float: none;
+      width: 100%;
+      text-align: center;
+      margin: 0;
+      padding: 1%;
+    }
+}
