@@ -14,6 +14,7 @@ Use:
 * Bower
 * Sass
 * Jquery
+* Magnific-popup
 * Normalize.css
 
 
